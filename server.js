@@ -3,7 +3,6 @@ const app = express()
 const expressLayouts = require('express-ejs-layouts')
 const path = require('path')
 const bodyParser = require('body-parser')
-require('dotenv').config()
 
 
 //Server config
