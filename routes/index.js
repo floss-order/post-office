@@ -3,15 +3,19 @@ const router = express.Router()
 const db = require('../db.js')
 
 
-router.get('/', async (req, res) => {
-    try {
-        let results = await db.getSubscriptions()
-        res.json(results)
-    }
-    catch(e) {
-        console.log(e)
-        res.sendStatus(500)
-    }
+// router.get('/', async (req, res) => {
+//     try {
+//         let results = await db.getSubscriptions()
+//         res.json(results)
+//     }
+//     catch(e) {
+//         console.log(e)
+//         res.sendStatus(500)
+//     }
+// })
+
+router.get('/', (req, res) => {
+    res.render('index.ejs')
 })
 
 
