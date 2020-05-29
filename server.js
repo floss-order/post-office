@@ -12,7 +12,6 @@ app.set('layout', 'layouts/layout.ejs')
 app.use(expressLayouts)
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded( { limit: '10mb', extended: false }))
-app.use(methodOverride('_method'))
 
 //Routes list
 const indexRouter = require('./routes/index.js')
