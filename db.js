@@ -49,6 +49,16 @@ postOfficeDb.getEditions = () => {
     })
 }
 
+postOfficeDb.query = (queryString) => {
+    return new Promise((resolve, reject) => {
+        pool.query(queryString, (err, results) => {
+            if(err) {
+                return reject(err)
+            }
+            return resolve(results)
+        })
+    })
+}
 
 //Export db model
 module.exports = postOfficeDb
