@@ -16,7 +16,7 @@
                 <td> <%= result['id'] %> </td>
                 <td> <%= result['ИНДЕКС_ИЗДАНИЯ'] %> </td>
                 <td> <%= result['СРОК_ПОДПИСКИ'] %> </td>
-                <td> <%= result['МЕСЯЦ_НАЧАЛА_ДОСТАВКИ'] %> </td>
+                <td> <%= result['МЕСЯЦ_НАЧАЛА_ПОДПИСКИ'] %> </td>
                 <td> <%= result['ГОД_НАЧАЛА_ПОДПИСКИ'] %> </td>
                 <td> <%= result['ПОЛУЧАТЕЛИ_КОД_ПОЛУЧАТЕЛЯ'] %> </td>
             </tr>
@@ -25,7 +25,7 @@
 </table>
 
 <form action="/tables/subscriptions" method="post">
-    <label for="query">Введите ваш запрос:</label>
-    <input type="text" name="query" id="query">
+    <label for="query">Введите ваш запрос</label>
+    <textarea name="query" id="qery" cols="30" rows="10"></textarea>
     <button type="submit">Отправить запрос</button>
 </form>
