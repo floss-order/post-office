@@ -20,7 +20,12 @@
                 <td> <%= result['ГОД_НАЧАЛА_ПОДПИСКИ'] %> </td>
                 <td> <%= result['ПОЛУЧАТЕЛИ_КОД_ПОЛУЧАТЕЛЯ'] %> </td>
             </tr>
-    
          <% }) %> 
     </tbody>
 </table>
+
+<form action="/tables/subscriptions" method="post">
+    <label for="query">Введите ваш запрос:</label>
+    <input type="text" name="query" id="query">
+    <button type="submit">Отправить запрос</button>
+</form>
