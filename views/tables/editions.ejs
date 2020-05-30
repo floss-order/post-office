@@ -1,0 +1,25 @@
+<table>
+    <caption>
+        <h1>ИЗДАНИЯ</h1>
+    </caption>
+    <thead>
+        <th>ИНДЕКС ИЗДАНИЯ</th>
+        <th>ВИД ИЗДАНИЯ</th>
+        <th>СТОИМОСТЬ ПОДПИСКИ (руб)</th>
+    </thead>
+    <tbody>
+        <% results.forEach(result => { %>
+            <tr> 
+                <td> <%= result['ИНДЕКС_ИЗДАНИЯ'] %> </td>
+                <td> <%= result['ВИД_ИЗДАНИЯ'] %> </td>
+                <td> <%= result['СТОИМОСТЬ_ПОДПИСКИ'] %> </td>
+            </tr>
+         <% }) %> 
+    </tbody>
+</table>
+
+<form action="/tables/editions" method="post">
+    <label for="query">Введите ваш запрос:</label>
+    <input type="text" name="query" id="query">
+    <button type="submit">Отправить запрос</button>
+</form>
