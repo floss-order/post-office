@@ -49,6 +49,18 @@ postOfficeDb.getEditions = () => {
     })
 }
 
+//Fetch all editions that has subscription from the db
+postOfficeDb.getEditionsSubscriptions = () => {
+    return new Promise((resolve, reject) => {
+        pool.query('SELECT * FROM ВЫПИСАННЫЕ_ИЗДАНИЯ', (err, results) => {
+            if(err) {
+                return reject(err)
+            }
+            return resolve(results)
+        })
+    })
+}
+
 postOfficeDb.query = (queryString) => {
     return new Promise((resolve, reject) => {
         pool.query(queryString, (err, results) => {

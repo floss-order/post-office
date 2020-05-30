@@ -56,7 +56,7 @@ router.post('/subscriptions', async (req, res) => {
 //Editions route
 router.get('/editions', async (req, res) => {
     try {
-        let results = await db.getSubscriptions()
+        let results = await db.getEditions()
         res.render('tables/editions.ejs', {results})
     }
     catch(e) {
@@ -82,7 +82,7 @@ router.post('/editions', async (req, res) => {
 //Editions that has subscriptions route
 router.get('/editions_has_subscriptions', async (req, res) => {
     try {
-        let results = await db.getSubscriptions()
+        let results = await db.getEditionsSubscriptions()
         res.render('tables/editions_has_subscriptions.ejs', {results})
     }
     catch(e) {
