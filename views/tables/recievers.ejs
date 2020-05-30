@@ -1,0 +1,25 @@
+<table>
+    <caption>
+        <h1>ПОДПИСКИ</h1>
+    </caption>
+    <thead>
+        <th>КОД ПОЛУЧАТЕЛЯ</th>
+        <th>ФИО ПОЛУЧАТЕЛЯ</th>
+        <th>АДРЕС ПОЛУЧАТЕЛЯ</th>
+    </thead>
+    <tbody>
+        <% results.forEach(result => { %>
+            <tr> 
+                <td> <%= result['КОД_ПОЛУЧАТЕЛЯ'] %> </td>
+                <td> <%= result['ФИО_ПОЛУЧАТЕЛЯ'] %> </td>
+                <td> <%= result['АДРЕС_ПОЛУЧАТЕЛЯ'] %> </td>
+            </tr>
+         <% }) %> 
+    </tbody>
+</table>
+
+<form action="/tables/recievers" method="post">
+    <label for="query">Введите ваш запрос:</label>
+    <input type="text" name="query" id="query">
+    <button type="submit">Отправить запрос</button>
+</form>
